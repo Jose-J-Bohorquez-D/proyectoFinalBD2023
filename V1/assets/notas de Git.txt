@@ -1,0 +1,614 @@
+	
+Curso de Git y Github
+ayuda de git-comandos 
+
+https://colab.research.google.com/drive/1fX3zyFufxY_yrnBPzYqG_YSqkrJT2lvg#scrollTo=fD16o2_mhfLi
+https://github.com/nildiert/CursosPlatzi/tree/master/Curso%20Profesional%20de%20Git%20y%20GitHub
+https://es.m.wikibooks.org/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Comandos_b%C3%A1sicos_de_una_shell
+
+#workingDirectory		#staging		#repositorio
+
+
+****************************************************************************************************************
+clase 1 (introduccion) 	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+¿Qué vamos a aprender de Git y GitHub?
+¡Hola! Soy Leonidas Esteban, profesor de varios cursos en Platzi, como el curso de Desarrollo Web, Responsive Design y Animaciones para la web. En este curso, te voy a mostrar cómo usar GitHub de una manera muy proactiva y no tan mecánica. Aprenderás por qué Github es una gran herramienta para cualquier desarrollador para tener un sistema de control de versiones.
+
+
+****************************************************************************************************************
+clase 2 (consepto teorico) 	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+¿Qué es un Sistema Control de Versiones?
+Un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo. Este tipo de sistemas nos permiten volver en el tiempo y salvar nuestro trabajo.
+
+La idea con este curso es ser capaces de crear un proyecto del cual tendremos siempre las versiones que modificamos a lo largo del desarrollo.
+
+Los tipos de sistemas de control son:
+
+Local Computer: Solo vive en nuestro computador.
+Centralizado: No depende únicamente de un computador en el que se trabaja, sino que depende del súper servidor en donde se almacena la información. El servidor provee las copias a sus hijos, pero solo guarda los cambios en un solo lugar.
+Sistema de control distribuidos: Cada uno de los que participan en el proyecto, tienen copia del proyecto que se realiza, por eso no dependemos de un solo computador que almacene toda la información.
+Git es un Sistema de Control de Versiones Distribuido.
+
+
+****************************************************************************************************************
+clase 3		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Los beneficios de usar Git
+¿Cómo nace Git? El sistema open source de **Linux ** necesitaba estar en un sistema de control de versiones. Por eso se asociaron con Beatkeeper.
+
+Entonces Linux creó su propio sistema de control de versiones distribuido. Se centró en:
+- Velocidad.
+- Diseño sencillo.
+- Fuerte apoyo en el desarrollo no lineal.
+- Completamente distribuido.
+- Capaz de manejar grandes proyectos.
+
+Además con Git puedes trabajar offline y te crea códigos hexadecimales para hacer referencias
+
+
+****************************************************************************************************************
+clase 4  #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Los tres estados de Git
+Estos son los tres estados de Git:
+
+1 	Working Directory
+2 	Staging Area. Esta es una área de preparación.
+3 	Git Directory (repository)
+Estos tres estados representan el ciclo de vida de nuestros archivos dentro de la plataforma.
+
+
+****************************************************************************************************************
+clase 5  #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+¿Qué es GitHub?
+GitHub Es una plataforma en la que se almacenan los cambios de un proyecto. Además es una plataforma que funciona como una red social. Aquí, las personas que visiten tu sitio puedan darle estrellitas a los proyectos que hayas desarrollado.
+
+git =sistema de control de versiones
+github =plataforma y red social que ademas funciona como hosting para almacenar el repositorio
+
+
+****************************************************************************************************************
+clase 6 (INSTALACION Y CONFIGURACION DE GIT)  #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+ link para instalacion de git para descargarlo
+ https://git-scm.com/
+ es recomendable instalar añexo a git el paquete llamado gitk desde la terminal como paquete externo
+ (muy recomendado es muy util )
+
+ Subcomando de git
+ uso: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Estos son comandos comunes de Git usados en varias situaciones:
+
+comienza un área de trabajo (ver también: git help tutorial)
+   clone             Clona un repositorio dentro de un nuevo directorio
+   init              Crea un repositorio de Git vacío o reinicia el que ya existe
+
+trabaja en los cambios actuales (ver también: git help everyday)
+   add               Agrega contenido de carpetas al índice
+   mv                Mueve o cambia el nombre a archivos, directorios o enlaces simbólicos
+   restore           Restaurar archivos de árboles de trabajo
+   rm                Borra archivos del árbol de trabajo y del índice
+   sparse-checkout   Inicializa y modifica el sparse-checkout
+
+examina el historial y el estado (ver también: git help revisions)
+   bisect            Use la búsqueda binaria para encontrar el commit que introdujo el bug
+   diff              Muestra los cambios entre commits, commit y árbol de trabajo, etc
+   grep              Imprime las líneas que concuerdan con el patron
+   log               Muestra los logs de los commits
+   show              Muestra varios tipos de objetos
+   status            Muestra el estado del árbol de trabajo
+
+crece, marca y ajusta tu historial común
+   branch            Lista, crea, o borra ramas
+   commit            Graba los cambios en tu repositorio
+   merge             Junta dos o más historiales de desarrollo juntos
+   rebase            Vuelve a aplicar commits en la punta de otra rama
+   reset             Reinicia el HEAD actual a un estado especifico
+   switch            Cambiar branches
+   tag               Crea, lista, borra o verifica un tag de objeto firmado con GPG
+
+colabora (mira también: git help workflows)
+   fetch             Descarga objetos y referencias de otro repositorio                                                                   
+   pull              Realiza un fetch e integra con otro repositorio o rama local                                                         
+   push              Actualiza referencias remotas junto con sus objetos asociados                                                        
+                                                                                                                                          
+'git help -a' y 'git help -g' listan los subcomandos disponibles y algunas                                                                
+guías de concepto. Consulte 'git help <command>' o 'git help <concepto>'                                                                  
+para leer sobre un subcomando o concepto específico.                                                                                      
+Mira 'git help git' para una vista general del sistema.
+
+COMANDOS ESENCIALES PARA INICIAR Y CONFIGURAR UN REPOSITORIO
+COMANDO														DESCRIPCION
+			
+git config --global user.name "Jose Bohorquez"			ajusta el nombre del responsable del repo
+git config --global user.email "bd567358546@gmail.com"	ajusta el correo del responsable del repo
+
+
+****************************************************************************************************************
+clase 7  #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Comandos útiles de la terminal
+Yo estoy utilizando una terminal alternativa iTerm.
+Tenemos que aprender algunos comandos sencillos, para trabajar con Git.
+
+El primero es cd que nos permite movernos dentro de carpetas. Con cd … podemos salir de las carpetas.
+Para crear carpetas vamos a usar mkdir y ponemos el nombre de la carpeta que vamos a crear.
+Con el comando ls vamos a ver las carpetas que tenemos creadas.
+Para limpiar la terminal vamos a usar el comando clear. Este nos sirve para hacer scroll e ir al principio de la terminal.
+El comando touch nos permite crear archivos.
+Para borrar archivos vamos a usar el comando rm y el nombre del archivo.
+De la misma forma para borrar carpetas usamos rm -rf y el nombre de la carpeta.
+Otra herramienta que vamos a usar dentro de Git para editar archivos con el editor que tengamos en nuestra máquina pero dentro de la terminal.
+Con el comando _:wq _vamos a guardar los cambios que hicimos dentro del archivo que habíamos creado.
+
+		COMANDO											DESCRIPCION
+
+cd + (carpetaDestino)								para ingresa a carpeta
+cd ..												para salir de carpetas
+mkdir												crea carpeta
+ls													muestra o lista archivos enla ruta actual
+clear												limpia la terminal
+touch +(nombreArchivo.(extencion))					crea archibo de texto
+rm +(nombreArchivo)									elimina archivo o carpeta
+rm -rf +(nombreArchivo)								elimina forsosamente archivo o carpeta
+git +(editorTextoTerminal)							podemos editar archivos con nano,gedit
+
+
+FLUJOS DE TRABAJO EN GIT
+****************************************************************************************************************
+clase 8 (Creando repositorios)  #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+git-init (Creando repositorios)
+Para crear nuestro primer repositorio vamos a crear el comando git init y el nombre de nuestro repositorio.
+Si utilizamos el comando ls vemos que aún no tenemos nada. Por eso vamos a crear un nuevo archivo que se llame file.txt. Adicionalmente, vamos a crear una carpeta que se llame segundo_repo, y para esto vamos a usar el comando mkdir de la terminal.
+Si creamos un repositorio, pareciera que no tuviera información, sin embargo el sistema operativo crea unos archivos ocultos, para borrarlo podríamos buscar dentro de los archivos de nuestra máquina.
+Para borrar un repositorio, vamos a usar el comando rm -rf .git y así se haría de forma manual.
+
+COMANDO												DESCRIPCION
+
+git init + (nombreRepo)								crea carpeta para repo nuevo
+git init											inicia o reinicia el repositorio
+cTRL+H 												muestra archivos ocultos en el administrador de archivos de linux 
+
+
+****************************************************************************************************************
+clase 9 git add | rm | status (Agregando, quitando y viendo el estatus de archivos)  #workingDirectory #staging #repositorio
+****************************************************************************************************************
+Ya sabemos inicializar repositorios, recuerda git init. Para este caso vamos a usar git init invie. En este caso tenemos crear los archivos que vamos a usar en este repositorio.
+Lo primero es crear un index.html.
+La x amarilla nos muestra que hay algo que no hemos agregado.
+Lo que podemos hacer es usar el comando git status nos muestran el estatus de los archivos que tenemos.
+Para agregarlos al working staging vamos a usar el comando add lo cual podemos verificar usando de nuevo el git status.
+Hasta que el archivo no esté en un commit se va a quedar en el limbo.
+Para sacar el archivo de git vamos a usar el comando git rm --cached y el nombre del archivo. Si por el contrario queremos borrar los archivos permanentement podemos usar rm y el nombre del archivo.
+
+MOVER ARCHIVOS DE WORKING DIRECTORY A 
+
+		COMANDO											DESCRIPCION
+
+git status												muestra estado de archivos de workingDirectory que no a pasado a staging
+git add +(nombreArchivo)								para agregar archivoEspesificado de workingDirectory a staging
+git add -A												para agregar todo de workingDirectory a staging
+git rm --cached											para sacar del area de staging
+git rm +(nombreArchivo)									quita y elimina archivos del repo
+git rm -f +(nombreArchivo)								quita y elimina archivos del repo forsosamente
+git add -n +(nombreArchivo)								confirma existencia de un archivo
+
+
+****************************************************************************************************************
+clase 10 (git commit (Confirmando cambios))  #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+git commit (Confirmando cambios)
+Ahora tenemos que pasar nuestros archivos al repositorio y para eso debemos usar git commit que es el comando que nos va a permitir comprometer nuestros archivos.
+En este momento veremos que la x amarilla ya no aparece porque hemos comprometido los archivos en Git.
+
+		COMANDO											DESCRIPCION
+
+git commit -m "mensaje u observacion importante"		mueve todo de staging a repo final
+git commit --amend										concatena cambio nuevo con cambio previo
+git commit -m "mensaje" --amend							reescribe el mensaje del commit y concatena cambio nuevo con cambio previo
+
+
+****************************************************************************************************************
+clase 11 (git tag (Etiquetando confirmaciones))		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+En este momento quizás ya quieras taggear o etiquetar los cambios. Para eso existe git tag, este simplemente solo va a agregar una etiqueta.
+Una cosa a destacar es que son ligeras o anotadas, las ligeras se crean con el nombre de la etiqueta, las anotadas son las que llevan además un mensaje usando -m podemos dejar un mensaje.
+Si queremos borrar una etiqueta debemos usar -d, si las queremos listar podemos usar -l y si las queremos renombrar usamos -f.
+Utilizando el Sha-1 podemos crear etiquetas anotadas haciendo referencia a commits viejos.
+
+		COMANDO															DESCRIPCION
+
+git tag -a 0.5 -m 'version estable del proyecto'						etiqueta anotada git tag(-a)+(tag#version)+-m+"mensaje" etiqueta ultimo commit o comit actual
+git tag -l 																lista las etiquetas
+git tag +(tag#version)+(hash-commit)									crea etiqueta a comit seleccionado
+git tag -d +(tag a eliminar)											elimina la etiqueta
+git tag -f -a(tag#version) -m"iniiando proyecto" +(hash-commit)			para renombrar el tag
+
+
+****************************************************************************************************************
+clase 12 (git log (Revisando la historia de nuestro proyecto))		 #workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Algo que hemos estado revisando es la historia de nuestro proyecto.
+Este se invoca con git log, los logs te muestran los códigos hexadecimales que crea Sha-1, el autor y la fecha en la que se envió el ese commit.
+Git log se puede personalizar, y de hecho es un comando que se puede personalizar mucho. Para esto podemos usar -online que nos ayuda a resumir mucho esos commits.
+Además, podemos ponerle múltiples parámetros, así como consultar solo los logs que nos interesan ver.
+La documentación de git log es súper extensa, y puedes usarla para revisar la historia de nuestro proyecto.
+
+		COMANDO															DESCRIPCION
+
+git log 											lista los commits o log
+git log --oneline									pone el log resumido( mejor vista )
+git log --oneline --graph							pone un * al lado del log ,muestra en forma lineal o historico
+git log + (#log a ver ejemplo  git log -1)			permite ver solo un comit
+
+			      
+****************************************************************************************************************
+clase 13 (git diff (Revisando los cambios entre versiones))		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Otra herramienta que podemos usar con git es la revisión de los cambios. Para esto vamos a usar el comando git diff.
+Si queremos saber cuáles son los cambios que hemos tenido entre un commit y otro, solo debemos hacer una comparación entre un commit y otro usando Sha-1.      		
+
+		COMANDO															DESCRIPCION
+
+git diff (comits ejemplo git diff comit1)		muestra los cambios que hay entre estado actual y el comit que se puso como parametro	
+git diff ( comit1 comit2 )						muestra los cambios entre los comits que se ponen con parametros	
+NOTA: para los dos anteriores comandos (ojo) con el orden de los parametros compara 1 con 2 y 2 con 1 por si las moscas	
+
+
+****************************************************************************************************************
+clase 14 (git reset -- soft)		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Alguna vez tuviste un error y quisiste borrar el commit que habías enviado. Para esto podemos hacer a través de git reset. Si quieres usar este comando debes tener mucho cuidado, porque puedes borrar muchos commits.
+El comando reset --soft nos permite identificar el commit que queremos resetear.
+
+NOTA: funciona de la siguiente manera git reset --soft (hash-commit) de esta manera nos resetea las modificaciones a partir de hash-commit que pasamos como parametro osea si tenemos 5 hash-commit en el siguiente orden 1,2,3,4,5 y en el 5 cometimos un error y lo queremos eliminar o quitar entonces ponemos asi git reset --soft (hash-commit4) entonces nos va a resetear los cambios del hash-commit5 y nos deja los del 4 y tengamos en cuenta que quita los cambios pero los mantiene en stage	
+
+		COMANDO															DESCRIPCION
+
+git reset --soft			se resetean los cambios segun el parametro osea se debe poner el hash de donde empezaron los 												 cambios para que se resetee a la version anterior del hash o a la version que esta sin cambios 										 	 (ojo) con esa transicion y cuidado con escojer mal el comit que se quiere resetear ademas deja 											 los archivos en el staging
+		
+
+****************************************************************************************************************
+clase 15 (git reset -- mixed)		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Ya sabemos que podemos utilizar git reset para hacer cambios. Ahora vamos a ver git reset --mixed con el Sha-1 del commit. Para revisar lo que hemos hecho con este comando, podemos usar git status. Podemos ver que nos descarta cambios del stage.
+Lo podemos usar para hacer cambios a los commits en los que pudimos tener algunos errores.+
+
+NOTA: descarta cambios y quita los commits , pero no deja los archivos en stage , los regresa al working directory
+
+		COMANDO															DESCRIPCION
+
+git reset --mixed 								elimina o descarta los cambios despues de el comit puesto como parametro, elimina el hash o 												comit  y deja los archivos en el  #workingDirectory	
+
+
+****************************************************************************************************************
+clase 16 (git reset -- hard) 		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Hasta el momento ya aprendimos a usar el git rest soft y el git reset mixed. Con el git reset hard vamos a hacer resets que serán definitivos.
+NOTA: para usar este comando es nesesario y recomendable tener otra pestaña con el listado de commits por si cometes un error asi que cuidado
+no lo hagas sin el requerimiento principal tener en otra ventana el listado de commits
+
+
+		COMANDO															DESCRIPCION
+
+git reset --hard= para manejar este comando es nesesario (obligatoriamente tener otra ventana abierta con el comando git log --oneline para que en caso de eliminar los cambios en git , por medio del historial de hash se pueda recuperar lo peridio (ojo con este comando puedes perderlo todo) )sin hash actua en el momento excacto de los ultimos cambios,elimina los cambios
+
+y se usa de la siguiente manera digamos que tenemos 7 hash o comit 1,2,3,4,5,6,7 y ahora el ejemplo = git reset --hard + (commit2) y esto lo que haria es resetear los cambios hasta este hash o comit 2 que se puso como parametro entonces quedarian los hash o comit asi 1,2 osea borro todos los cambios siguientes al hash o comit que se paso como parametro 
+(ojo por que elimina los archivos de staging y del workingDirectory) 
+
+
+****************************************************************************************************************
+clase 17 (Desafío: Configurar otro editor de texto)		#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+		COMANDO															DESCRIPCION
+
+git config --global core.editor +NombreEditor 							configura el editor por defecto para el repositorio
+git config --global core.editor +"NombreEditor --wait" 					configura el editor por defecto para el repositorio
+
+
+****************************************************************************************************************
+clase 18 (git branch (Múltiples variantes del repositorio))
+****************************************************************************************************************
+Hasta el momento hemos estado trabajando en la rama principal de git. Ahora nos vamos a centrar en las posibles ramas de nuestro proyecto.
+Comenzamos con ““Master”” que es la rama principal, sin embargo, podemos crear ramas para que el equipo pueda trabajar en el proyecto. Lo ideal es que siempre tengas ramas adicionales para que si hacemos cambios podamos hacer modificaciones. Para crear una rama o un branch usamos el comando git branch.
+Si necesitamos borrar una rama definitivamente, debemos usar -D. Para renombrar una rama vamos a usar el comando -m."
+
+		COMANDO													DESCRIPCION
+
+git branch +nombreRama								crea una rama o version alterna
+git branch -l 										lista las ramas creadas
+git branch -d +(nombreRama)							para eliminar una rama
+git branch -D +(nombreRama)							elimina rama forsosamente
+git branch -m+(nombreRamaRename)+(NuevoNombreRama)	para renombrar ramas
+
+
+****************************************************************************************************************
+clase 19 (git checkout (Moviéndonos entre ramas y versiones))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Ya sabes crear y eliminar ramas, ahora vamos a aprender a movernos dentro de ellas.
+Para esto vamos a usar git checkout. Usando este comando vamos a poder dirigirnos específicamente a esa rama. También podemos usar el SHA-1 para identificar la rama que queremos ver. En este caso no estamos borrando nada, sino solo revisando el estado de nuestro proyecto en ese momento.
+
+¿Cuál es la diferencia entre git reset y git checkout?
+Con git chekcout podemos movernos en el tiempo, pero no borramos nada de los demás commits que ya hemos creado.
+Uno de los usos más importantes de este comando es cazar bugs o verificar el estado de nuestro proyecto en determinados momentos.
+Además, podemos crear ramas con git checkout, para esto debemos usar -b y esto nos representa un atajo para crear una rama y además moverte a ella.
+
+		COMANDO															DESCRIPCION
+
+git checkout+(nombreRamaDestino)					para ingresar, salir o cambiar de ramas
+git checkout+(comit)								nos mueve al comit que se puso en parametro
+git checkout -b 									crea rama y la navega de una vez
+
+y para regresar al master solo basta con git checkout master o nombre de la rama rpincipal y no abra pasado nada
+todo sigue como lo dejaste
+
+MEZCLAR RAMAS (se debe posicionar en la rama que quiere que quede con los cambios)
+
+
+****************************************************************************************************************
+clase 20 (Trabajando entre ramas)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+demostracion con archivos en el video
+
+
+****************************************************************************************************************
+clase 21 (git merge (Mezclando ramas y resolviendo conflictos))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+En este material nos vamos a concentrar en mezclar ramas y resolver conflictos. Lo primero que tengo que hacer para mezclar ramas es pararme sobre la rama que quiero mezclar.
+Para mezclar los cambios deberíamos usar el comando git merge. Las instrucciones sería pararnos desde la rama que queremos mezclar y hacer un git merge con la rama que pretendemos usar.
+
+
+		COMANDO															DESCRIPCION
+para mezclar los cambios es nesesario estar en la rama en la cual se quiere que se guarden todos los cambios
+
+git merge +(nombreRama)									mezcla la rama actual con la rama que se pone como parametro
+
+
+
+****************************************************************************************************************
+clase 22 (git rebase (Reescribe la historia de tu proyecto))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+		COMANDO															DESCRIPCION
+
+git rebase +RamaQueSeQuiereGuaerdarCambios				reescribe linea del tiempo de toda las ramas y unifica en una sola
+
+
+
+
+****************************************************************************************************************
+clase 23 (git stash (Guardando cambios temporalmente))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+¿Qué tal si aún no estás listo para confirmar ningún cambio? Stash es un estado que tenemos como intermedio. Para esto debemos ir a alguna de nuestras ramas y usando el comando git stash que nos permite hacer cambios, pero no confirmarlos.
+
+		COMANDO															DESCRIPCION
+
+git stash 												deja los cambios donde estan dentro de la rama actual y da acceso a otra rama sin 															perder los cambios ,crea un stash con los datos actuales y deja ira a otra rama 
+git stash list 											lista los stash
+git stash drop + (stash)								elimina stash que se pasa como parametro
+
+
+****************************************************************************************************************
+clase 22 (Cherry pick eligiendo commits selectivamente)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Si estás trabajando en una rama, pero de repente notas que hiciste un cambio en la rama que no debías, para esto podemos usar cherry pick. Este comando nos puede salvar la vida, ya que nos permite sacar cambios específicos de una rama y mezclarlos en otra.
+
+		COMANDO															DESCRIPCION
+
+git cherry-pik +shah-commit								para mover shah-commits de una rama a otra
+primero se verifica el commit de la rama que se quiere alar, luego se posiciona en la rama a la que se quiere mover el shah-commit
+y hace el comando con l shah-commit de la otra rama y ya esta se mueve el commit 
+
+
+ 
+
+
+GITHUB
+****************************************************************************************************************
+clase 23 (Creando una cuenta en GitHub)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+aca muestran el paso a paso de como crear una cuenta en githu
+
+
+****************************************************************************************************************
+clase 24 (git clone/fork (Clonando repositorios remotos))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Vamos a proceder a crear nuestro primer proyecto en GitHub.
+
+Crea Nuevo repositorio
+Asigna un nombre a tu repositorio
+Asigna una descripción a tu repositorio
+Puedes adicionar un ““read me””
+Crea el repositorio
+En la parte derecha encuentras una opción que se llama clone or download si no es nuestra intención compartirlo.
+Un fork va a clonar el proyecto y nos va a crear un nuevo proyecto en el GitHub.
+ejemplo de cloar repo
+tener en cuenta que para copiar se debe estar seguro de donde se va a guardar por ende en mejor estar seguro de 
+en que proyecto o carpeta estas
+git clone+( el link del repo que sale luego de darle al boton clonar repo  )
+queda asi git clone https://github.com/dioscouri/tienda.git
+
+con el boton de forkque tienen la insignia como de una Y con circulos pequeños en sus 3 extremos 
+se clona o copea a sus repositorios personales en github , solo basta con buscar cualquier proyecto y para hacerlo tuyo y 
+modificarlo basta con darle a fork y luego de que se agregue a tu repo lo puedes modificar en su totalidads
+
+
+
+****************************************************************************************************************
+clase 25 (Añadiendo una llave ssh a GitHub)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Si quieres mantener tu seguros dentro de GitHub es importante usar llaves ssh con el comando 
+
+ssh-keygen -t rsa -b 4096 -C "bd567358546@gmail.com" 	  para configurar la llave ssh
+pbcopy < ~/.ssh/id_rsa.pub 								  para copiar la llave ssh a github			
+clip < ~/.ssh/id_ed25519.pub
+en linux para copiar la llave ssh es asi 
+xclip -sel clip < ~/.ssh/id_rsa.pub
+ y luego de esto se nos copea un parrafo de datos con la clave de la llave ssh a nuestro portapapeles
+y finalmente debemos ir a nuestro perfil de github donde dice tu perfil y luego en donde dice editar perfil
+luego donde dice claves ssh y gpg ya en este lugar vamos a donde dice crear nueva llave ssh y salen 2 campos pára 
+llenar el primero dice que pongamos un nombre o descripcion y el segundo lo llenamos dandole ctrl+v o click derecho 
+pegar para que se pegue la llave ssh que copiamos al principio con el comando xclip y ya esta aceptamos y agregamos 
+
+
+****************************************************************************************************************
+clase 26 (git remote (Añadiendo un repositorio remoto a uno local))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Tenemos que crear una conexión entre tu repositorio local y tu repositorio remoto para que puedas compartirlo con la comunidad. Para esto vamos a usar un nuevo comando que en este caso es git remote. Por convención lo nombramos “origin”. Para borrarlo podemos usar git remote remove y el nombre del repositorio.
+
+git remote  								para sincronizar o enviar el repo de local a hithub
+git remote add (nombreRepo)+(git@github.com:bd567358546/pediya.git)	agrega el repositorio a hithub
+git remote -v								verifica conexion con github
+git remote remove +nombreRepo						elimina el repositorio parametro
+
+
+****************************************************************************************************************
+clase 27 (git pull/fetch (Trayendo cambios desde el repositorio remoto))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Vamos a compartir nuestro código con el repositorio remoto. Antes de poder enviar cambios tengo que tener los mismos cambios en el repositorio remoto que en el repositorio local.
+Para traer los cambios del repositorios remoto vamos a usar el comando git fetch. Este comando recibe dos parámetros 1. desde donde y hacia donde van.
+Luego de traer los cambios, debemos mezclarlos con la rama que estamos usando en local. Para esto usamos git merge.
+
+git fetch +nombreRepo +nombreRama			trae archivos de repo de github a repo local
+git merge origin/master					mezcla los cambios con el repo local y el remoto
+y si sale error al momento de unir los archivos se debe poner
+git merge origin/master --allow-unrelated-histories	forsa o repara todo para que funcione la mezcla de archivos
+git pull origin master					
+
+****************************************************************************************************************
+clase 28 (git pull/fetch (Trayendo cambios desde el repositorio remoto))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+git pull/fetch (Trayendo cambios desde el repositorio remoto)
+Vamos a compartir nuestro código con el repositorio remoto. Antes de poder enviar cambios tengo que tener los mismos cambios en el repositorio remoto que en el repositorio local.
+Para traer los cambios del repositorios remoto vamos a usar el comando git fetch. Este comando recibe dos parámetros 1. desde donde y hacia donde van.
+Luego de traer los cambios, debemos mezclarlos con la rama que estamos usando en local. Para esto usamos git merge.
+git fetch origin master	muestra los dos master a combinar
+luego ponesgit merge origin/master
+y si este comando te da error pones asi 
+luego ponesgit merge origin/master --allow-unrelated-histories
+para traer los cambios se debe poner asi 
+git pull origin master	
+
+****************************************************************************************************************
+clase 29 (git push (Enviando cambios al repositorio remoto))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+
+Para enviar nuestro código al repositorio remoto vamos a usar el comando git push. Así logramos que otras personas tengan acceso a nuestro proyecto.
+Cuando esto termine tendremos acceso a nuestro trabajo desde la plataforma de GitHub.
+Lo primero que debemos hacer es enviar nuestros tags en el proyecto.
+también recordemos que podemos eviar ramas, lo que también posdemos hacer a través del uso del comando git push [nombre de la rama].
+
+git push origin master 				envia el repo de local a github pero solo el master
+git push origin master --tags		envia todos los tags de local al repo de github
+git push origin master+(nombreRama)	envia la rama que se pasa como parametro a github
+
+****************************************************************************************************************
+clase 30 (Explorando la plataforma de GitHub)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Watch
+
+Podemos calificar los proyectos que hemos creado.
+Podemos ver las estadísticas de nuestro proyecto.
+También las personas que le han hecho fork.
+Podemos proteger ciertas ramas del proyecto.	es recomendale protejer nuestra rama master
+
+****************************************************************************************************************
+clase 31 (GitHub Projects, el SCRUM de GitHub)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+GitHub tiene unas herramientas increíbles para nuestros proyectos. Una de estas herramientas es el projects de GitHub, la cual nos da la posibilidad de tener un mayor control del desarrollo de nuestro proyecto.
+Aquí como en la metodología de SCRUM tenemos la posibilidad de saber qué tenemos pendiente por hacer, cuáles son las features que se encuentran en desarrollo, identificar los bugs que emergen de nuestro proyecto, y los features que debemos revisar.
+
+****************************************************************************************************************
+clase 32 (Creando un template para issues)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Lo ideal es que siempre que creemos un proyecto tengamos un template para enviar pull requests o cuando tengamos issues.
+en master ceramos nuevo archivo  con el nombre de 
+issue_template.md  	esto para evitar el pull requests o cuando
+tengamos issues
+
+luego en el archivo ponemos lo que sea pregunta o duda
+
+y al hacer el issues ya nos sale el mensaje de el archivo md
+tambien se le puede asignar a quien o a que area de trabajo deveria ir esta pregunta o mensaje 
+
+****************************************************************************************************************
+clase 33 (Creando un template para Pull Request
+)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Creando un template para Pull Request
+para ello es nesesario crear un archivo en master de hithub con el nombre de 
+pull_request_template.md
+
+luego en el archivo ponemos lo que sea pregunta o duda
+
+y al hacer el issues ya nos sale el mensaje de el archivo md
+tambien se le puede asignar a quien o a que area de trabajo deveria ir esta pregunta o mensaje 
+
+****************************************************************************************************************
+clase 34 (.gitignore (Ignorando archivos no deseados))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Si tienes archivos que no pueden ser públicos, como archivos de configuración con contraseñas, lo ideal es que no los subas a tu repositorio, estos archivos los puedes poner en el archivo .gitignore.
+
+para que el archivo sea ignorado se debe poner touch (nombre del archivo)
+luego haces git status y paso seguido 
+touch .gitignore 
+
+****************************************************************************************************************
+clase 35 (Pull Request (Colabora a proyectos externos)))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+pull request osea mezclar archivos con la rama master bloqueada desde github pidiendo permiso al administador  o a una persona espesifica o a una rama de trabajo o colaborador 
+
+****************************************************************************************************************
+clase 36 (Issues y Milestones (Reportando y monitoreando errores eficientemente)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+	
+
+****************************************************************************************************************
+clase 37 (¿Cómo funciona un Pull Request en GitHub?)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+
+
+****************************************************************************************************************
+clase 38 (GitHub Pages, hosting gratuito de archivos estáticos)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+GitHub nos permite publicar nuestros proyectos a tráves de GitHub Pages.
+Los GitHubs pages almacenan código estático.
+
+****************************************************************************************************************
+clase 39 (Dominios personalizados en Github)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+GitHub me permite personalizar la URL de mi GitHub Pages, primero debo comprar el dominio, nosotros usamos namecheap.com.
+En el dashboard de namecheap vamos a manage nuestro dominio, vamos a configurar los DNS.
+En GitHub vamos a settings y creamos un custom URL.
+Creamos en el proyecto el archivo CNAME y en el ponemos la URL del dominio que compramos.
+se pone el dominio ejemplo invie .website
+La ip de GitHub es 192.168.252.153 - 192.168.252.154.
+
+****************************************************************************************************************
+clase 40 (GitHub Desktop, todo lo que necesitas de Git en una sola herramienta gráfica)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Interfaz de escritorio en desktop.github.com para que puedas trabajar gráficamente desde tu PC. Desarrollada en Electron. Lo primero que debes hacer es iniciar sesión, luego clonar el proyecto.
+
+Puedes ver todo el historial de tu proyecto de una manera muy amigable.
+Quien hace los cambios, quien los aprueba.
+-También puedes navegar en todos tus repositorios.
+Puedes hacer cambios.
+
+****************************************************************************************************************
+clase 41 (Enviando invie a producción (invie.com))	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+
+
+****************************************************************************************************************
+clase 42 (Desafío: Crea un repositorio público configurando un template de Issues y Pull Rquests)	#workingDirectory		#staging		#repositorio
+****************************************************************************************************************
+Crea tu propio repositorio con tus propios templates de Issues y Pull Request.	
+

@@ -1,0 +1,45 @@
+
+
+
+
+###############################################
+-- fin paso a paso para la conexion con git --
+###############################################
+
+6 esa clave me la envian para que puedan trabajar
+
+5 clip < ~/.ssh/id_ed25519.pub
+
+4 ssh-keygen -t ed25519 -C "paco_rivera@gmail.com"
+
+3 git config --global user.email "paco_rivera@gmail.com"
+
+2 git config --global user.name "Paco Rivera"
+
+1 git init   (para iniciar git en la ruta)
+
+#################################################
+-- inicio paso a paso para la conexion con git --
+#################################################
+
+
+
+###############################################
+-- Fin Daily Domingo 3 De Septiembre De 2023 --
+###############################################
+
+6 se deben reportar los avances en el grupo y adjuntar cap del hash del commit
+
+5 deben entregar avances diarios
+
+4 una vez asignados los roles deben profundizar en lo que se les indique
+
+3 debemos sincronizar el trabajo y evitar faltas o nos afecta a (Todos)
+
+2 revivan el git que ya saben
+
+1 investiguen que es el daily/scrum diario o saily scrum
+
+##################################################
+-- inicio Daily Domingo 3 De Septiembre De 2023 --
+##################################################

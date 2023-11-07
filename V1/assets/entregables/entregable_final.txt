@@ -1,0 +1,42 @@
+Trimestre|  Lista de Chequeo
+o Módulo |                                                                                         | Valoración
+---------|-----------------------------------------------------------------------------------------|-----------
+I        |Nombre proyecto - Objetivo general - Objetivos específicos - Planteamiento del problema -|
+         |Alcance del proyecto - Justificación(Objetivos enfocados al proyecto no al ciclo de vida)|CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+I        |En el proyecto se evidencian requerimientos                                              |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+I        |Se evidencia el diagrama de casos de uso, objetos y clase del proyecto usando el estándar|
+         |UML 2,4,1 o superior                                                                     |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+I        |Mockups / Diseño interfaz gráfica Pagina Web Principal (HTML - CSS - JS)                 |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+I        |Software de acuerdo a la arquitectura propuesta siguiendo las buenas prácticas de        |
+         |programación                                                                             |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+II       |Evidencia la realización del modelo entidad relación MER                                 |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+II       |Evidencia la realización del Modelo Relacional MR                                        |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+II       |Evidencia la normalización del Modelo Relacional (MR)                                    |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+II       |En el proyecto se evidencia el diccionario de datos                                      |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+II       |Evidencia uso de sentencias DDL y DML para la construcción de la base de datos del       |
+         |sistema de información                                                                   |CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+II       |Opcional construcción del sistema de información con bases de datos NoSQL                |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+III      |Evidencia la realización de las pruebas unitarias del software                           |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+III      |Evidencia la documentación de las pruebas unitarias del software                         |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+IV       |Evidencia la Instalación y configuración el servidor de aplicaciones ó el App Service.   |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|----------
+IV       |Evidencia la Instalación y configuración del servidor de DB y/o fuente de datos.         |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|---------
+V        |Evidencia la puesta en funcionamiento de la aplicación según plan de implementación      |
+         |establecido                                                                              |NO_CUMPLE
+---------|-----------------------------------------------------------------------------------------|--------
+V        |Presenta el manual de usuario, según normas y procedimientos establecidos                |NO_CUMPLE
+---------------------------------------------------------------------------------------------------------------

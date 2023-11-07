@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&family=Montserrat:wght@300&family=Prompt&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: maven pro;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{    
+
+    margin: 5px 0;
+}
+
+.contenedor1{
+    display: flex;
+    flex-direction:row;
+    position: relative;
+    background-color: darkseagreen;
+       
+}
+
+.accesos{
+  
+    position: absolute;
+    top:55px;
+    left: 40%;
+        
+}
+
+.accesos li{
+    display: inline;
+    margin: 0 0 0 5px;
+    
+}
+
+.accesos a{
+    text-transform: uppercase;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.accesos a:hover{
+    color: #055222;
+    text-decoration: underline;
+}
+
+.BuscarProd{
+    margin: 15px;
+    height: 2rem;
+    width:20rem;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.opcionmenu{
+    background-color: transparent;
+    border: 0;
+    color: aliceblue;
+    font-family: maven pro;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: .1rem;
+    font-weight: 600;
+    padding: .2rem;
+}
+
+aside{
+    padding: 2rem;
+    color: --var(white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nombre1{
+    font-weight: 400;
+    font-size: 4rem;
+    font-family:Gladsome morning;
+    margin: 3rem .1rem;
+    color: aliceblue;
+       
+}
+
+footer{
+    background: darkseagreen;
+    height: 8em;
+}
+
+.textofooter{
+    color: rgb(25, 48, 25);
+    font-size: 1rem;
+}
+
+main{
+    background: url(Vistas/Dependencias/imagenes/a1.jpg);
+    padding: 5%;
+}
+
+.tituloprincipal{
+    color: rgb(3, 56, 12);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: maven pro;
+    margin-bottom: 2rem;
+}
+.pasarela{
+    
+    padding: 1rem;
+    background: rgb(129, 180, 140);
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    
+}
+.productoimagen{
+    max-width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.productodetalle{
+    background-color: rgb(87, 69, 21);
+    color: white;
+    padding: .6rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.productotitulo{
+    font-size: 1rem;
+}
+.productoagregar{
+    border: 0;
+    background-color: white;
+    color:  rgb(87, 69, 21);
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background-color .2s, color .2s;
+}
+.productoagregar:hover{
+    background-color:  rgb(87, 69, 21);
+    color: white;
+}
+.bi-caret-right-fill{
+    transform: rotatez(90deg);
+}
+
+
+/*compras.html*/
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color:darkseagreen;
+}
+.maincarrito{
+    margin: 1rem;
+    border-radius: 2rem;
+ 
+}
+.contenedor2{
+    padding: 1rem;
+    background: rgb(129, 180, 140);
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    
+       
+}
+
+.nombre{
+    font-weight: 400;
+    font-size: 4rem;
+    font-family: Gladsome morning;
+    color: aliceblue;
+}
+
+.botonvolver,
+.botoncarrito{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    border: 0;
+    background-color: white;
+    color:  rgb(87, 69, 21);
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background-color .2s, color .2s;
+    
+}
+.botonvolver:hover,
+.botoncarrito:hover{
+
+    background:  rgb(87, 69, 21);
+    transform: scale(1.2);
+    color: white;
+}
+
+
+
+.numerito{
+    background-color: white;
+    color: #055222;
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+.contenedorcarrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carritovacio,
+.carritocomprado{
+    color: rgb(33, 68, 39);
+}
+
+.carritoproductos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carritoproducto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(223, 221, 221);
+    color: rgb(3, 56, 12);
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+
+.carritoimagen{
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.carritoproducto small{
+    font-size: .75rem;
+}
+
+.productoeliminado{
+    border: 0;
+    background-color: transparent;
+    color: rgb(153, 36, 36);
+    cursor: pointer;
+    
+}
+
+.carritoacciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carritovaciar{
+    border: 0;
+    background-color: rgb(214, 211, 211);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: #055222;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carritoaccionesderecha{
+    display: flex;
+}
+
+.carritoaccionestotal{
+    display: flex;
+    background-color: rgb(221, 218, 218);
+    padding: 1.5rem;
+    color: #055222;
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+}
+
+.carritocomprar{
+    border: 0;
+    background-color:  #055222;;
+    padding: 1.5rem;
+    color: #f8faf9;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.disabled{
+    display: none;
+}
+
+
+
