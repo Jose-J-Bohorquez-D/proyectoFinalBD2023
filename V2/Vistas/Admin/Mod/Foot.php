@@ -3,7 +3,7 @@
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Campeche</a>, All Right Reserved. 
+                            &copy; <a href="#">Campeche</a>, Todos Los Derechos Reservados. 
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <?php #require_once("Vistas/Admin/Mod/Derechos.php"); ?>
